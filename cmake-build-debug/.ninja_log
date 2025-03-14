@@ -1,0 +1,38 @@
+# ninja log v6
+110	3504	7636013400439107	_deps/raylib-build/raylib/CMakeFiles/raylib.dir/rshapes.c.obj	8fff5b216e908f14
+6	25	7636933818556333	C:/Users/arong/OneDrive/Desktop/Computer Science/Fun/Orbits/cmake-build-debug/CMakeFiles/cmake.verify_globs	b85627b7ba7c5c5a
+241	13580	7636013401739527	_deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.obj	986048d18c30ef6a
+26	1557	7636933822770555	build.ninja	fbb1815c68e043ed
+138	13590	7636013400719077	_deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/context.c.obj	c4ab5519eda28d2e
+157	13597	7636013400909453	_deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/platform.c.obj	b3e83e7719bae6b3
+129	1939	7636013400619112	_deps/raylib-build/raylib/CMakeFiles/raylib.dir/utils.c.obj	24bf13bcb9ab13a1
+95	21630	7636013400285577	_deps/raylib-build/raylib/CMakeFiles/raylib.dir/raudio.c.obj	b9f4adde49ffad3f
+191	13874	7636013401249291	_deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj	1a2046ac00b1d274
+186	13298	7636013401199294	_deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj	4b43af73b05e1f93
+113	9062	7636013400469082	_deps/raylib-build/raylib/CMakeFiles/raylib.dir/rtext.c.obj	3b4e6aa140edda3b
+274	13586	7636013402078540	_deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.obj	22e999cf413fe172
+122	19901	7636013400549080	_deps/raylib-build/raylib/CMakeFiles/raylib.dir/rtextures.c.obj	8f51d5cf9b8c0c1e
+200	13875	7636013401334748	_deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/null_init.c.obj	f2e17b435e12eace
+162	13865	7636013400949077	_deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj	a9f33a00a144b006
+55	134	7636786615808433	CMakeFiles/Orbits.dir/Body.cpp.obj	d76a4fa655c543ea
+251	14155	7636013401848516	_deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/null_window.c.obj	4e391a7354b62c32
+144	13535	7636013400769073	_deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/init.c.obj	1aa36a540ba6c7bb
+181	13958	7636013401149276	_deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/window.c.obj	2cdac2176f79b5ec
+153	13841	7636013400859106	_deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/monitor.c.obj	cf26c6a422cbbf2e
+148	15007	7636013400819116	_deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/input.c.obj	aace0db709d0d7c6
+1940	16000	7636013418727541	_deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/win32_module.c.obj	a16479f9a4f8e44b
+3504	15082	7636013434380912	_deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj	6bb782541503e183
+106	17026	7636013400399599	_deps/raylib-build/raylib/CMakeFiles/raylib.dir/rmodels.c.obj	b28cc27a13ffc756
+70	751	7636911579398878	CMakeFiles/Orbits.dir/main.cpp.obj	3af094951ccaaa65
+13535	17856	7636013534687792	_deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj	6cc81ba23774cc10
+37	799	7636912727268971	CMakeFiles/Orbits.dir/Sim.cpp.obj	eeb00ee2d55b57f8
+13591	17818	7636013535241464	_deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj	f4dc85b91166552
+9062	16660	7636013489954102	_deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj	70ce69ac6cec07d2
+42	1449	7636929098423172	_deps/raylib-build/raylib/CMakeFiles/raylib.dir/rcore.c.obj	81b8453d591ff175
+13299	17812	7636013532319277	_deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj	ebe161d34da8471
+13580	17713	7636013535140033	_deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj	173d07005ad493ae
+13586	18384	7636013535200241	_deps/raylib-build/raylib/external/glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj	90f4643d6f9e9816
+1450	1810	7636929112512009	_deps/raylib-build/raylib/libraylib.a	8e1f996557974a22
+1810	2032	7636929116110256	Orbits.exe	3f42d8bff8a882d2
+25	526	7636933822770555	build.ninja	fbb1815c68e043ed
+15	31	7636933823923049	C:/Users/arong/OneDrive/Desktop/Computer Science/Fun/Orbits/cmake-build-debug/CMakeFiles/cmake.verify_globs	b85627b7ba7c5c5a
