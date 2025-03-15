@@ -39,7 +39,6 @@ int main() {
     simulator.addBody(pos1, vel1, mass, 8.f);
     simulator.addBody(pos2, vel2, mass, 8.f);
     simulator.addBody(pos3, vel3, mass, 8.f);
-
     SetTargetFPS(60);
     simulator.run();
     return 0;

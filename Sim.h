@@ -30,14 +30,7 @@ private:
     [[nodiscard]] std::vector<std::vector<Vector2>> computePredictedPaths() const;
 
 public:
-    // Getter: returns a constant reference to the vector of bodies.
-    [[nodiscard]] const std::vector<Body>& getBodies() const;
-    
-    // Non-const getter: returns a reference to the vector of bodies.
-    std::vector<Body>& getBodies();
-    
-    // Setter: sets the bodies vector.
-    void setBodies(const std::vector<Body> &newBodies);
+
 
     // Add a new body to the simulator.
     void addBody(const Vector2 &position, const Vector2 &velocity, float mass, float radius);
