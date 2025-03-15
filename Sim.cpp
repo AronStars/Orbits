@@ -3,38 +3,34 @@
 #include <cstdio>
 #include <algorithm> // For std::min and std::max
 
-OrbitSimulator::OrbitSimulator(): selectedIndex(-1), isDragging(false),
-      G(50.0F), dtScale(1.0f), screenWidth(800), screenHeight(600)
-{
+OrbitSimulator::OrbitSimulator(): dispvelx(0), dispvely(0), selectedIndex(-1), isDragging(false),
+                                  G(50.0F), dtScale(1.0f), screenWidth(800), screenHeight(600) {
     InitWindow(screenWidth, screenHeight, "Orbit Simulator");
 
     // Set up a three-body configuration.
     constexpr float mass = 10000.0f;
     constexpr float speed = 50.0f;
-    Vector2 const center = { static_cast<float>(screenWidth) / 2.0f, static_cast<float>(screenHeight) / 2.0f };
+    Vector2 const center = {static_cast<float>(screenWidth) / 2.0f, static_cast<float>(screenHeight) / 2.0f};
 
     constexpr float dx = 75.0f;
     constexpr float dy = 43.3f;
 
-    Vector2 pos1 = { center.x + dx, center.y - dy };
-    Vector2 vel1 = { pos1.y - center.y, -(pos1.x - center.x) };
-    {
+    Vector2 pos1 = {center.x + dx, center.y - dy};
+    Vector2 vel1 = {pos1.y - center.y, -(pos1.x - center.x)}; {
         float const norm = sqrtf(vel1.x * vel1.x + vel1.y * vel1.y);
         vel1.x = (vel1.x / norm) * speed;
         vel1.y = (vel1.y / norm) * speed;
     }
 
-    Vector2 pos2 = { center.x - dx, center.y - dy };
-    Vector2 vel2 = { pos2.y - center.y, -(pos2.x - center.x) };
-    {
+    Vector2 pos2 = {center.x - dx, center.y - dy};
+    Vector2 vel2 = {pos2.y - center.y, -(pos2.x - center.x)}; {
         float const norm = sqrtf(vel2.x * vel2.x + vel2.y * vel2.y);
         vel2.x = (vel2.x / norm) * speed;
         vel2.y = (vel2.y / norm) * speed;
     }
 
-    Vector2 pos3 = { center.x, center.y + 2 * dy };
-    Vector2 vel3 = { pos3.y - center.y, -(pos3.x - center.x) };
-    {
+    Vector2 pos3 = {center.x, center.y + 2 * dy};
+    Vector2 vel3 = {pos3.y - center.y, -(pos3.x - center.x)}; {
         float const norm = sqrtf(vel3.x * vel3.x + vel3.y * vel3.y);
         vel3.x = (vel3.x / norm) * speed;
         vel3.y = (vel3.y / norm) * speed;
@@ -353,7 +349,7 @@ std::vector<std::vector<Vector2> > OrbitSimulator::computePredictedPaths() const
     return predictedPaths;
 }
 
-void OrbitSimulator::draw() const {
+void OrbitSimulator::draw() {
     BeginDrawing();
     ClearBackground(BLACK);
 
@@ -386,12 +382,20 @@ void OrbitSimulator::draw() const {
         const Body& b = bodies[selectedIndex];
         char info[128];
 
-        // Display position.
-        sprintf(info, "Pos: (%.1f, %.1f)", b.position.x, b.position.y);
-        DrawText(info, screenWidth - 280, 10, 20, LIGHTGRAY);
+        // Introduce delay
+        static float elapsedTime = 0.0f;
+        elapsedTime += GetFrameTime();
+        if (constexpr float delayTime = 0.1f; elapsedTime >= delayTime) {
+            dispvelx = b.velocity.x;
+            dispvely = b.velocity.y;
+            dispposx = b.position.x;
+            dispposy = b.position.y;
 
-        // Display velocity.
-        sprintf(info, "Vel: (%.1f, %.1f)", b.velocity.x, b.velocity.y);
+            elapsedTime = 0.0f;
+        }
+
+        //Display velocity
+        sprintf(info, "Vel: (%.1f, %.1f)", dispvelx, dispvely);
         DrawText(info, screenWidth - 280, 40, 20, LIGHTGRAY);
 
         // Display mass.
@@ -401,6 +405,10 @@ void OrbitSimulator::draw() const {
         // Display radius.
         sprintf(info, "Radius: %.1f", b.radius);
         DrawText(info, screenWidth - 280, 100, 20, LIGHTGRAY);
+
+        // Display position.
+        sprintf(info, "Pos: (%.1f, %.1f)", dispposx, dispposy);
+        DrawText(info, screenWidth - 280, 10, 20, LIGHTGRAY);
     }
     EndDrawing();
 }

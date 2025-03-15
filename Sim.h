@@ -8,6 +8,10 @@
 class OrbitSimulator {
 private:
     std::vector<Body> bodies;
+    float dispposx;
+    float dispposy;
+    float dispvelx;
+    float dispvely;
     int selectedIndex;
     bool isDragging;
     const float G;         // Gravitational constant
@@ -25,7 +29,7 @@ private:
     void handleCollisions();
 
     void updatePhysics(float dt);
-    void draw() const;
+    void draw();
 
     // Computes predicted future paths of bodies.
     [[nodiscard]] std::vector<std::vector<Vector2>> computePredictedPaths() const;
