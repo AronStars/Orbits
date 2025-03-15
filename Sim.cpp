@@ -3,7 +3,8 @@
 #include <cstdio>
 #include <algorithm> // For std::min and std::max
 
-OrbitSimulator::OrbitSimulator(): dispvelx(0), dispvely(0), selectedIndex(-1), isDragging(false),
+OrbitSimulator::OrbitSimulator(): dispposx(0), dispposy(0), dispvelx(0), dispvely(0), selectedIndex(-1),
+                                  isDragging(false),
                                   G(50.0F), dtScale(1.0f), screenWidth(800), screenHeight(600) {
     InitWindow(screenWidth, screenHeight, "Orbit Simulator");
 
