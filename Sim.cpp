@@ -8,6 +8,30 @@ OrbitSimulator::OrbitSimulator(): dispposx(0), dispposy(0), dispvelx(0), dispvel
                                   G(50.0F), dtScale(1.0f){
 }
 
+
+// Getter: returns a constant reference to the vector of bodies.
+const std::vector<Body>& OrbitSimulator::getBodies() const {
+    return bodies;
+}
+
+// Non-const getter: returns a reference to the vector of bodies.
+std::vector<Body>& OrbitSimulator::getBodies() {
+    return bodies;
+}
+
+// Setter: sets the bodies vector.
+void OrbitSimulator::setBodies(const std::vector<Body> &newBodies) {
+    bodies = newBodies;
+}
+
+// Add a new body to the simulator.
+void OrbitSimulator::addBody(const Vector2 &position, const Vector2 &velocity, float mass, float radius) {
+    bodies.emplace_back(position, velocity, mass, radius);
+}
+
+
+
+
 OrbitSimulator::~OrbitSimulator() {
     CloseWindow();
 }

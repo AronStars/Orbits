@@ -36,9 +36,9 @@ int main() {
         vel3.x = (vel3.x / norm) * speed;
         vel3.y = (vel3.y / norm) * speed;
     }
-    simulator.bodies.emplace_back(pos1, vel1, mass, 8.f);
-    simulator.bodies.emplace_back(pos2, vel2, mass, 8.f);
-    simulator.bodies.emplace_back(pos3, vel3, mass, 8.f);
+    simulator.addBody(pos1, vel1, mass, 8.f);
+    simulator.addBody(pos2, vel2, mass, 8.f);
+    simulator.addBody(pos3, vel3, mass, 8.f);
 
     SetTargetFPS(60);
     simulator.run();
