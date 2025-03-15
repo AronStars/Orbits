@@ -7,7 +7,6 @@
 
 class OrbitSimulator {
 private:
-    std::vector<Body> bodies;
     float dispposx;
     float dispposy;
     float dispvelx;
@@ -16,8 +15,7 @@ private:
     bool isDragging;
     const float G;         // Gravitational constant
     const float dtScale;   // Time scale factor for simulation
-    const int screenWidth;
-    const int screenHeight;
+
 
     // Private helper functions.
     static float distance(Vector2 a, Vector2 b);
@@ -35,6 +33,7 @@ private:
     [[nodiscard]] std::vector<std::vector<Vector2>> computePredictedPaths() const;
 
 public:
+    std::vector<Body> bodies;
     OrbitSimulator();
     ~OrbitSimulator();
     void run();
